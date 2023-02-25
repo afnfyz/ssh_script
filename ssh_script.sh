@@ -4,15 +4,11 @@ echo ""
 echo "Welcome!"
 echo "This script allows you to connect to an AWS Instance."
 echo ""
-chmod 400 ~/Downloads/*.pem
+chmod 400 ~/Downloads/*.pem 
+#exit 1 
 read -p "Please input the public IP address of the instace: " IP
+read -p "Username?" user
+#Last file that was downloaded.
 PEM="$(ls -tRr ~/Downloads/*.pem | tail -n1)"
-###PEM_FILE=$(basename $PEM)
-###echo ${PEM}
-###DIRPATH=$(dirname ${PEM}| xargs | cut -d' ' -f 1)/
-echo $DIRPATH
-###echo $PEM
-###FULLPATH=$DIRPATH$PEM_FILE
-echo $FULLPATH
-ssh -o "StrictHostKeyChecking no" ${IP}
-ssh ec2-user@${IP} -i "${PEM}"
+ssh -o "StrictHostKeyChecking no" ${user}@${IP} -i "${PEM}"
+#ssh ${user}@${IP} -i "${PEM}"
