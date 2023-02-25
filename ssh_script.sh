@@ -11,4 +11,4 @@ read -p "Username?" user
 #Last file that was downloaded.
 PEM="$(ls -tRr ~/Downloads/*.pem | tail -n1)"
 ssh -o "StrictHostKeyChecking no" ${user}@${IP} -i "${PEM}"
-#ssh ${user}@${IP} -i "${PEM}"
+##ssh ${user}@${IP} -i "${PEM}"
