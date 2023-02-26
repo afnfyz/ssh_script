@@ -1,4 +1,11 @@
 #!/bin/bash
+
+................
+#Description: 
+# Ssh into aws Ec2 instance. 
+# The Script will use the last downloaded .pem file to do so.
+................
+
 echo ""
 echo ""
 echo "Welcome!"
